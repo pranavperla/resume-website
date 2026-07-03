@@ -14,7 +14,8 @@ Then open http://localhost:8000.
 
 - Boot sequence that types `terraform init` / `terraform apply` on load
 - Plan output streams in line-by-line as you scroll
-- Live prompt at the bottom — try `help`, `whoami`, `books`, `terraform destroy`
+- `career.tf` / `career.py` toggle in the title bar — the same resume rendered as a Terraform plan or as Python code (also switchable by typing `python` / `terraform` in the prompt)
+- Live prompt at the bottom — try `help`, `whoami`, `entrupy`, `books`, `terraform destroy`
 - tmux-style status bar for section navigation
 - Respects `prefers-reduced-motion`
 

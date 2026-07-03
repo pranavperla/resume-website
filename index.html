@@ -11,246 +11,425 @@
 <link rel="stylesheet" href="styles.css" />
 <noscript><style>.ln, .boot-line { opacity: 1 !important; } .step .ln { transition: none; }</style></noscript>
 </head>
-<body>
+<body data-mode="tf">
 
 <!-- terminal chrome -->
 <div class="titlebar">
   <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-  <span class="title">pranav@career: ~/pranav-perla — terraform apply — 80×24</span>
+  <span class="title" id="win-title">pranav@career: ~/pranav-perla — terraform apply — 80×24</span>
+  <div class="mode-toggle" role="tablist" aria-label="resume language">
+    <button id="tab-tf" class="tab active" role="tab" aria-selected="true">career.tf</button>
+    <button id="tab-py" class="tab" role="tab" aria-selected="false">career.py</button>
+  </div>
 </div>
 
 <main class="term" id="term">
 
   <!-- ======== boot sequence (animated on load) ======== -->
   <section class="boot" id="init">
-    <div class="boot-line prompt-ln"><span class="prompt">pranav@career:~$</span> <span class="typed" data-type="terraform init"></span></div>
-    <div class="boot-line"> </div>
-    <div class="boot-line">Initializing the backend...</div>
-    <div class="boot-line">Initializing provider plugins...</div>
-    <div class="boot-line">- Finding pranav/career versions matching <span class="str">"&gt;= 2024.4"</span>...</div>
-    <div class="boot-line">- Installing pranav/career v2026.7.3...</div>
-    <div class="boot-line">- Installed pranav/career v2026.7.3 <span class="cm">(verified by 2 salary increments)</span></div>
-    <div class="boot-line"> </div>
-    <div class="boot-line"><span class="ok">Terraform has been successfully initialized!</span></div>
-    <div class="boot-line"> </div>
-    <div class="boot-line prompt-ln"><span class="prompt">pranav@career:~$</span> <span class="typed" data-type="terraform apply -auto-approve"></span></div>
-    <div class="boot-line"> </div>
-    <div class="boot-line">Terraform will perform the following actions:</div>
-    <div class="boot-line"> </div>
+    <div class="v-tf">
+      <div class="boot-line prompt-ln"><span class="prompt">pranav@career:~$</span> <span class="typed" data-type="terraform init"></span></div>
+      <div class="boot-line"> </div>
+      <div class="boot-line">Initializing the backend...</div>
+      <div class="boot-line">Initializing provider plugins...</div>
+      <div class="boot-line">- Finding pranav/career versions matching <span class="str">"&gt;= 2024.4"</span>...</div>
+      <div class="boot-line">- Installing pranav/career v2026.7.3...</div>
+      <div class="boot-line">- Installed pranav/career v2026.7.3 <span class="cm">(verified by 2 salary increments)</span></div>
+      <div class="boot-line"> </div>
+      <div class="boot-line"><span class="ok">Terraform has been successfully initialized!</span></div>
+      <div class="boot-line"> </div>
+      <div class="boot-line prompt-ln"><span class="prompt">pranav@career:~$</span> <span class="typed" data-type="terraform apply -auto-approve"></span></div>
+      <div class="boot-line"> </div>
+      <div class="boot-line">Terraform will perform the following actions:</div>
+      <div class="boot-line"> </div>
+    </div>
+    <div class="v-py">
+      <div class="boot-line prompt-ln"><span class="prompt">pranav@career:~$</span> <span class="typed" data-type="cat career.py"></span></div>
+      <div class="boot-line"> </div>
+    </div>
   </section>
 
   <!-- ======== engineer ======== -->
   <section class="step" id="engineer">
-    <div class="ln cm p2"># engineer.pranav_perla will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"engineer"</span> <span class="rname">"pranav_perla"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">name</span>     = <span class="str">"Pranav Perla"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">location</span> = <span class="str">"Bangalore, India"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">email</span>    = <a class="str" href="mailto:pranavperla21@gmail.com">"pranavperla21@gmail.com"</a></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">phone</span>    = <a class="str" href="tel:+917981372371">"+91 79813 72371"</a></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">summary</span>  = <span class="kw">&lt;&lt;-</span><span class="rname">EOT</span></div>
-    <div class="ln p12 str">MLOps engineer deploying, optimizing and operating production</div>
-    <div class="ln p12 str">machine learning systems at startup speed.</div>
-    <div class="ln p12 str">Current work spans visual search over 88M luxury-bag images,</div>
-    <div class="ln p12 str">Anyscale/Ray model serving, production RCAs and demo automation.</div>
-    <div class="ln p8"><span class="rname">EOT</span></div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">engineer.pranav_perla: Creating...</div>
-    <div class="ln ok">engineer.pranav_perla: Creation complete <span class="cm">[id=pranav-perla]</span></div>
-    <div class="ln"> </div>
+    <div class="v-tf">
+      <div class="ln cm p2"># engineer.pranav_perla will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"engineer"</span> <span class="rname">"pranav_perla"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">name</span>     = <span class="str">"Pranav Perla"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">location</span> = <span class="str">"Bangalore, India"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">email</span>    = <a class="str" href="mailto:pranavperla21@gmail.com">"pranavperla21@gmail.com"</a></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">phone</span>    = <a class="str" href="tel:+917981372371">"+91 79813 72371"</a></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">summary</span>  = <span class="kw">&lt;&lt;-</span><span class="rname">EOT</span></div>
+      <div class="ln p12 str">MLOps engineer deploying, optimizing and operating production</div>
+      <div class="ln p12 str">machine learning systems at startup speed.</div>
+      <div class="ln p12 str">Current work spans visual search over 88M luxury-bag images,</div>
+      <div class="ln p12 str">Anyscale/Ray model serving, production RCAs and demo automation.</div>
+      <div class="ln p8"><span class="rname">EOT</span></div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">engineer.pranav_perla: Creating...</div>
+      <div class="ln ok">engineer.pranav_perla: Creation complete <span class="cm">[id=pranav-perla]</span></div>
+      <div class="ln"> </div>
+    </div>
+    <div class="v-py">
+      <div class="ln cm">#!/usr/bin/env python3</div>
+      <div class="ln"><span class="str">"""pranav perla — career, provisioned as code."""</span></div>
+      <div class="ln"> </div>
+      <div class="ln"><span class="kw">from</span> career.models <span class="kw">import</span> Engineer, Job, Project, Toolbox, University</div>
+      <div class="ln"> </div>
+      <div class="ln">engineer = <span class="rname">Engineer</span>(</div>
+      <div class="ln p4"><span class="attr">name</span>=<span class="str">"Pranav Perla"</span>,</div>
+      <div class="ln p4"><span class="attr">location</span>=<span class="str">"Bangalore, India"</span>,</div>
+      <div class="ln p4"><span class="attr">email</span>=<a class="str" href="mailto:pranavperla21@gmail.com">"pranavperla21@gmail.com"</a>,</div>
+      <div class="ln p4"><span class="attr">phone</span>=<a class="str" href="tel:+917981372371">"+91 79813 72371"</a>,</div>
+      <div class="ln p4"><span class="attr">summary</span>=(</div>
+      <div class="ln p8"><span class="str">"MLOps engineer deploying, optimizing and operating production "</span></div>
+      <div class="ln p8"><span class="str">"machine learning systems at startup speed. Current work spans "</span></div>
+      <div class="ln p8"><span class="str">"visual search over 88M luxury-bag images, Anyscale/Ray model "</span></div>
+      <div class="ln p8"><span class="str">"serving, production RCAs and demo automation."</span></div>
+      <div class="ln p4">),</div>
+      <div class="ln">)</div>
+      <div class="ln"> </div>
+    </div>
   </section>
 
   <!-- ======== jobs ======== -->
   <section class="step" id="jobs">
-    <div class="ln cm p2"># job.entrupy will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"entrupy"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"MLOps Engineer"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"Entrupy"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"October 1, 2025 → present"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Google Lens-style component search over Entrupy's 88M-image luxury-bag dataset, enabling detailed component-level search and identification"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Fine-tuned YOLO detection models and classifier models to identify detailed bag components for visual retrieval workflows"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Deployed multiple machine-learning models on Anyscale, a managed Ray service, to handle millions of production requests"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Debugged production model-serving incidents, fixed production errors and wrote RCAs for reliability improvements"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Automated deployment of multiple demo applications for different internal teams"</span>,</div>
-    <div class="ln p6">]</div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">job.entrupy: Creating...</div>
-    <div class="ln status">job.entrupy: Still creating... <span class="cm">[9mo elapsed — current role]</span></div>
-    <div class="ln"> </div>
+    <div class="v-tf">
+      <div class="ln cm p2"># job.entrupy will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"entrupy"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"MLOps Engineer"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"Entrupy"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"October 1, 2025 → present"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Google Lens-style component search over Entrupy's 88M-image luxury-bag dataset, enabling detailed component-level search and identification"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Fine-tuned YOLO detection models and classifier models to identify detailed bag components for visual retrieval workflows"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Deployed multiple machine-learning models on Anyscale, a managed Ray service, to handle millions of production requests"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Debugged production model-serving incidents, fixed production errors and wrote RCAs for reliability improvements"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Automated deployment of multiple demo applications for different internal teams"</span>,</div>
+      <div class="ln p6">]</div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">job.entrupy: Creating...</div>
+      <div class="ln status">job.entrupy: Still creating... <span class="cm">[9mo elapsed — current role]</span></div>
+      <div class="ln"> </div>
 
-    <div class="ln cm p2"># job.physarum_ai will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"physarum_ai"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"Associate Machine Learning Engineer"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"Physarum.ai"</span> <span class="cm"># Bangalore</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"April 2024 → October 2025"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"GenAI chatbot on ECS Fargate in a private VPC subnet — NAT gateways, VPC endpoints, ALB, Route 53, ECR — for secure, user-driven AI product cataloguing"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Config-driven reusable Terraform modules from YAML specs (EC2, ECS, EKS, RDS, Lambda, IAM) — manual infra setup time down 60–70%"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Centralized Prometheus + Grafana monitoring on EC2, rolled out via Terraform, shared by every GenAI app"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"End-to-end ML alerting — data drift, statefulness, data volume — with Terraform, Google Workflow and Airflow"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Feature stores migrated to BigQuery behind secure authentication views"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Event-driven S3 → RDS data transfer with AWS Glue"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Locust API response times cut from seconds to milliseconds"</span>,</div>
-    <div class="ln p6">]</div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">job.physarum_ai: Creating...</div>
-    <div class="ln ok">job.physarum_ai: Creation complete after 18mo <span class="cm">[id=first-full-time-role]</span></div>
-    <div class="ln"> </div>
+      <div class="ln cm p2"># job.physarum_ai will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"physarum_ai"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"Associate Machine Learning Engineer"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"Physarum.ai"</span> <span class="cm"># Bangalore</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"April 2024 → October 2025"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"GenAI chatbot on ECS Fargate in a private VPC subnet — NAT gateways, VPC endpoints, ALB, Route 53, ECR — for secure, user-driven AI product cataloguing"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Config-driven reusable Terraform modules from YAML specs (EC2, ECS, EKS, RDS, Lambda, IAM) — manual infra setup time down 60–70%"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Centralized Prometheus + Grafana monitoring on EC2, rolled out via Terraform, shared by every GenAI app"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"End-to-end ML alerting — data drift, statefulness, data volume — with Terraform, Google Workflow and Airflow"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Feature stores migrated to BigQuery behind secure authentication views"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Event-driven S3 → RDS data transfer with AWS Glue"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Locust API response times cut from seconds to milliseconds"</span>,</div>
+      <div class="ln p6">]</div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">job.physarum_ai: Creating...</div>
+      <div class="ln ok">job.physarum_ai: Creation complete after 18mo <span class="cm">[id=first-full-time-role]</span></div>
+      <div class="ln"> </div>
 
-    <div class="ln cm p2"># job.accure_ai will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"accure_ai"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"Data Science Intern"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"Accure.ai"</span> <span class="cm"># Hyderabad</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"February 2024 → April 2024"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Python + PostgreSQL scripts for server file-integrity checks and robust data verification"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"SQLAlchemy query utility wired into the Thinkers360 API"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Benchmarked Hugging Face RAG models for token-efficient inference — query latency down significantly"</span>,</div>
-    <div class="ln p6">]</div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">job.accure_ai: Creating...</div>
-    <div class="ln ok">job.accure_ai: Creation complete after 3mo <span class="cm">[id=data-science-intern]</span></div>
-    <div class="ln"> </div>
+      <div class="ln cm p2"># job.accure_ai will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"accure_ai"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"Data Science Intern"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"Accure.ai"</span> <span class="cm"># Hyderabad</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"February 2024 → April 2024"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Python + PostgreSQL scripts for server file-integrity checks and robust data verification"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"SQLAlchemy query utility wired into the Thinkers360 API"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Benchmarked Hugging Face RAG models for token-efficient inference — query latency down significantly"</span>,</div>
+      <div class="ln p6">]</div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">job.accure_ai: Creating...</div>
+      <div class="ln ok">job.accure_ai: Creation complete after 3mo <span class="cm">[id=data-science-intern]</span></div>
+      <div class="ln"> </div>
 
-    <div class="ln cm p2"># job.odinschool will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"odinschool"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"Product Intern"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"OdinSchool"</span> <span class="cm"># Hyderabad</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"June 2023 → August 2023"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"Web-scraped data cleaned with pandas + regex, stripping stray HTML for reliable datasets"</span>,</div>
-    <div class="ln p10"><span class="plus">+</span> <span class="str">"RAG chatbot on the GPT-3.5 Turbo API over the company knowledge base — support ticket load cut significantly"</span>,</div>
-    <div class="ln p6">]</div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">job.odinschool: Creating...</div>
-    <div class="ln ok">job.odinschool: Creation complete after 3mo <span class="cm">[id=product-intern]</span></div>
-    <div class="ln"> </div>
+      <div class="ln cm p2"># job.odinschool will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"job"</span> <span class="rname">"odinschool"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">role</span>    = <span class="str">"Product Intern"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">company</span> = <span class="str">"OdinSchool"</span> <span class="cm"># Hyderabad</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">period</span>  = <span class="str">"June 2023 → August 2023"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">shipped</span> = [</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"Web-scraped data cleaned with pandas + regex, stripping stray HTML for reliable datasets"</span>,</div>
+      <div class="ln p10"><span class="plus">+</span> <span class="str">"RAG chatbot on the GPT-3.5 Turbo API over the company knowledge base — support ticket load cut significantly"</span>,</div>
+      <div class="ln p6">]</div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">job.odinschool: Creating...</div>
+      <div class="ln ok">job.odinschool: Creation complete after 3mo <span class="cm">[id=product-intern]</span></div>
+      <div class="ln"> </div>
+    </div>
+    <div class="v-py">
+      <div class="ln">entrupy = <span class="rname">Job</span>(</div>
+      <div class="ln p4"><span class="attr">role</span>=<span class="str">"MLOps Engineer"</span>,</div>
+      <div class="ln p4"><span class="attr">company</span>=<span class="str">"Entrupy"</span>,</div>
+      <div class="ln p4"><span class="attr">period</span>=(<span class="str">"2025-10-01"</span>, <span class="str">"present"</span>),  <span class="cm"># current role — 9mo and counting</span></div>
+      <div class="ln p4"><span class="attr">shipped</span>=[</div>
+      <div class="ln p8"><span class="str">"Google Lens-style component search over Entrupy's 88M-image luxury-bag dataset, enabling detailed component-level search and identification"</span>,</div>
+      <div class="ln p8"><span class="str">"Fine-tuned YOLO detection models and classifier models to identify detailed bag components for visual retrieval workflows"</span>,</div>
+      <div class="ln p8"><span class="str">"Deployed multiple machine-learning models on Anyscale, a managed Ray service, to handle millions of production requests"</span>,</div>
+      <div class="ln p8"><span class="str">"Debugged production model-serving incidents, fixed production errors and wrote RCAs for reliability improvements"</span>,</div>
+      <div class="ln p8"><span class="str">"Automated deployment of multiple demo applications for different internal teams"</span>,</div>
+      <div class="ln p4">],</div>
+      <div class="ln">)</div>
+      <div class="ln"> </div>
+      <div class="ln">physarum = <span class="rname">Job</span>(</div>
+      <div class="ln p4"><span class="attr">role</span>=<span class="str">"Associate Machine Learning Engineer"</span>,</div>
+      <div class="ln p4"><span class="attr">company</span>=<span class="str">"Physarum.ai"</span>,  <span class="cm"># Bangalore — first full-time role</span></div>
+      <div class="ln p4"><span class="attr">period</span>=(<span class="str">"2024-04"</span>, <span class="str">"2025-10"</span>),</div>
+      <div class="ln p4"><span class="attr">shipped</span>=[</div>
+      <div class="ln p8"><span class="str">"GenAI chatbot on ECS Fargate in a private VPC subnet — NAT gateways, VPC endpoints, ALB, Route 53, ECR — for secure, user-driven AI product cataloguing"</span>,</div>
+      <div class="ln p8"><span class="str">"Config-driven reusable Terraform modules from YAML specs (EC2, ECS, EKS, RDS, Lambda, IAM) — manual infra setup time down 60–70%"</span>,</div>
+      <div class="ln p8"><span class="str">"Centralized Prometheus + Grafana monitoring on EC2, rolled out via Terraform, shared by every GenAI app"</span>,</div>
+      <div class="ln p8"><span class="str">"End-to-end ML alerting — data drift, statefulness, data volume — with Terraform, Google Workflow and Airflow"</span>,</div>
+      <div class="ln p8"><span class="str">"Feature stores migrated to BigQuery behind secure authentication views"</span>,</div>
+      <div class="ln p8"><span class="str">"Event-driven S3 → RDS data transfer with AWS Glue"</span>,</div>
+      <div class="ln p8"><span class="str">"Locust API response times cut from seconds to milliseconds"</span>,</div>
+      <div class="ln p4">],</div>
+      <div class="ln">)</div>
+      <div class="ln"> </div>
+      <div class="ln">accure = <span class="rname">Job</span>(</div>
+      <div class="ln p4"><span class="attr">role</span>=<span class="str">"Data Science Intern"</span>,</div>
+      <div class="ln p4"><span class="attr">company</span>=<span class="str">"Accure.ai"</span>,  <span class="cm"># Hyderabad</span></div>
+      <div class="ln p4"><span class="attr">period</span>=(<span class="str">"2024-02"</span>, <span class="str">"2024-04"</span>),</div>
+      <div class="ln p4"><span class="attr">shipped</span>=[</div>
+      <div class="ln p8"><span class="str">"Python + PostgreSQL scripts for server file-integrity checks and robust data verification"</span>,</div>
+      <div class="ln p8"><span class="str">"SQLAlchemy query utility wired into the Thinkers360 API"</span>,</div>
+      <div class="ln p8"><span class="str">"Benchmarked Hugging Face RAG models for token-efficient inference — query latency down significantly"</span>,</div>
+      <div class="ln p4">],</div>
+      <div class="ln">)</div>
+      <div class="ln"> </div>
+      <div class="ln">odinschool = <span class="rname">Job</span>(</div>
+      <div class="ln p4"><span class="attr">role</span>=<span class="str">"Product Intern"</span>,</div>
+      <div class="ln p4"><span class="attr">company</span>=<span class="str">"OdinSchool"</span>,  <span class="cm"># Hyderabad</span></div>
+      <div class="ln p4"><span class="attr">period</span>=(<span class="str">"2023-06"</span>, <span class="str">"2023-08"</span>),</div>
+      <div class="ln p4"><span class="attr">shipped</span>=[</div>
+      <div class="ln p8"><span class="str">"Web-scraped data cleaned with pandas + regex, stripping stray HTML for reliable datasets"</span>,</div>
+      <div class="ln p8"><span class="str">"RAG chatbot on the GPT-3.5 Turbo API over the company knowledge base — support ticket load cut significantly"</span>,</div>
+      <div class="ln p4">],</div>
+      <div class="ln">)</div>
+      <div class="ln"> </div>
+    </div>
   </section>
 
   <!-- ======== modules ======== -->
   <section class="step" id="modules">
-    <div class="ln cm p2"># module.luxury_component_search will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"luxury_component_search"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>     = <span class="str">"entrupy/visual-search/luxury-bags"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">dataset</span>    = <span class="str">"88,000,000 company-owned luxury-bag images"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">goal</span>       = <span class="str">"Google Lens-style component identification and detailed component-level search"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">models</span>     = [<span class="str">"fine-tuned YOLO detector"</span>, <span class="str">"component classifier"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">domain</span>     = <span class="str">"luxury bag authentication and retrieval"</span></div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">module.luxury_component_search: Creating...</div>
-    <div class="ln ok">module.luxury_component_search: Creation complete <span class="cm">[id=88m-images-indexed]</span></div>
-    <div class="ln"> </div>
+    <div class="v-tf">
+      <div class="ln cm p2"># module.luxury_component_search will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"luxury_component_search"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>     = <span class="str">"entrupy/visual-search/luxury-bags"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">dataset</span>    = <span class="str">"88,000,000 company-owned luxury-bag images"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">goal</span>       = <span class="str">"Google Lens-style component identification and detailed component-level search"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">models</span>     = [<span class="str">"fine-tuned YOLO detector"</span>, <span class="str">"component classifier"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">domain</span>     = <span class="str">"luxury bag authentication and retrieval"</span></div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">module.luxury_component_search: Creating...</div>
+      <div class="ln ok">module.luxury_component_search: Creation complete <span class="cm">[id=88m-images-indexed]</span></div>
+      <div class="ln"> </div>
 
-    <div class="ln cm p2"># module.anyscale_model_serving will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"anyscale_model_serving"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>      = <span class="str">"entrupy/mlops/managed-ray"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">runtime</span>     = <span class="str">"Anyscale — managed Ray"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">traffic</span>     = <span class="str">"millions of production requests"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">operations</span> = [<span class="str">"multi-model deployment"</span>, <span class="str">"production incident debugging"</span>, <span class="str">"RCA writing"</span>, <span class="str">"demo-app automation"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">consumers</span>   = <span class="str">"multiple internal teams"</span></div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">module.anyscale_model_serving: Creating...</div>
-    <div class="ln ok">module.anyscale_model_serving: Creation complete <span class="cm">[id=ray-at-scale]</span></div>
-    <div class="ln"> </div>
+      <div class="ln cm p2"># module.anyscale_model_serving will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"anyscale_model_serving"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>      = <span class="str">"entrupy/mlops/managed-ray"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">runtime</span>     = <span class="str">"Anyscale — managed Ray"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">traffic</span>     = <span class="str">"millions of production requests"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">operations</span> = [<span class="str">"multi-model deployment"</span>, <span class="str">"production incident debugging"</span>, <span class="str">"RCA writing"</span>, <span class="str">"demo-app automation"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">consumers</span>   = <span class="str">"multiple internal teams"</span></div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">module.anyscale_model_serving: Creating...</div>
+      <div class="ln ok">module.anyscale_model_serving: Creation complete <span class="cm">[id=ray-at-scale]</span></div>
+      <div class="ln"> </div>
 
-    <div class="ln cm p2"># module.eks_data_connectors will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"eks_data_connectors"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>  = <span class="str">"physarum/data-connectors/eks"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">purpose</span> = <span class="str">"ingest, parse, embed, store and semantically retrieve documents from custom uploads + external integrations"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">stack</span>   = [<span class="str">"FastAPI"</span>, <span class="str">"Knative Serving"</span>, <span class="str">"Kourier"</span>, <span class="str">"Gateway/HTTPRoute"</span>, <span class="str">"StatefulSets"</span>, <span class="str">"PV/PVC"</span>, <span class="str">"namespace isolation"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">search</span>  = [<span class="str">"Qdrant"</span>, <span class="str">"OpenSearch"</span>] <span class="cm"># fast, scalable semantic retrieval</span></div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">module.eks_data_connectors: Creating...</div>
-    <div class="ln ok">module.eks_data_connectors: Creation complete <span class="cm">[id=k8s-in-production]</span></div>
-    <div class="ln"> </div>
+      <div class="ln cm p2"># module.eks_data_connectors will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"eks_data_connectors"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>  = <span class="str">"physarum/data-connectors/eks"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">purpose</span> = <span class="str">"ingest, parse, embed, store and semantically retrieve documents from custom uploads + external integrations"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">stack</span>   = [<span class="str">"FastAPI"</span>, <span class="str">"Knative Serving"</span>, <span class="str">"Kourier"</span>, <span class="str">"Gateway/HTTPRoute"</span>, <span class="str">"StatefulSets"</span>, <span class="str">"PV/PVC"</span>, <span class="str">"namespace isolation"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">search</span>  = [<span class="str">"Qdrant"</span>, <span class="str">"OpenSearch"</span>] <span class="cm"># fast, scalable semantic retrieval</span></div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">module.eks_data_connectors: Creating...</div>
+      <div class="ln ok">module.eks_data_connectors: Creation complete <span class="cm">[id=k8s-in-production]</span></div>
+      <div class="ln"> </div>
 
-    <div class="ln cm p2"># module.rag_template will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"rag_template"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>    = <span class="str">"physarum/rag-app/template"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">generator</span> = <span class="str">"Copier + Jinja"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">ships</span>     = [<span class="str">"Streamlit UI"</span>, <span class="str">"Docker"</span>, <span class="str">"GitHub Actions CI/CD"</span>, <span class="str">"RDS conversation history"</span>, <span class="str">"adaptable Terraform modules"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">effect</span>    = <span class="str">"one command → a complete, deployable RAG repo tailored to user-defined inputs"</span></div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">module.rag_template: Creating...</div>
-    <div class="ln ok">module.rag_template: Creation complete <span class="cm">[id=templates-all-the-way-down]</span></div>
-    <div class="ln"> </div>
+      <div class="ln cm p2"># module.rag_template will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"rag_template"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>    = <span class="str">"physarum/rag-app/template"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">generator</span> = <span class="str">"Copier + Jinja"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">ships</span>     = [<span class="str">"Streamlit UI"</span>, <span class="str">"Docker"</span>, <span class="str">"GitHub Actions CI/CD"</span>, <span class="str">"RDS conversation history"</span>, <span class="str">"adaptable Terraform modules"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">effect</span>    = <span class="str">"one command → a complete, deployable RAG repo tailored to user-defined inputs"</span></div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">module.rag_template: Creating...</div>
+      <div class="ln ok">module.rag_template: Creation complete <span class="cm">[id=templates-all-the-way-down]</span></div>
+      <div class="ln"> </div>
 
-    <div class="ln cm p2"># module.medi_assist_chatbot will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"medi_assist_chatbot"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>  = <span class="str">"pranav/university-project"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">purpose</span> = <span class="str">"guides users on adverse drug reactions, blood pressure and required medicines"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">nlp</span>     = [<span class="str">"NLTK lemmatization"</span>, <span class="str">"tokenization"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">model</span>   = <span class="str">"supervised LSTM — TensorFlow / Keras"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">ui</span>      = <span class="str">"HTML + CSS chat interface"</span></div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">module.medi_assist_chatbot: Creating...</div>
-    <div class="ln ok">module.medi_assist_chatbot: Creation complete <span class="cm">[id=first-of-many]</span></div>
-    <div class="ln"> </div>
+      <div class="ln cm p2"># module.medi_assist_chatbot will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">module</span> <span class="rname">"medi_assist_chatbot"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">source</span>  = <span class="str">"pranav/university-project"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">purpose</span> = <span class="str">"guides users on adverse drug reactions, blood pressure and required medicines"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">nlp</span>     = [<span class="str">"NLTK lemmatization"</span>, <span class="str">"tokenization"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">model</span>   = <span class="str">"supervised LSTM — TensorFlow / Keras"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">ui</span>      = <span class="str">"HTML + CSS chat interface"</span></div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">module.medi_assist_chatbot: Creating...</div>
+      <div class="ln ok">module.medi_assist_chatbot: Creation complete <span class="cm">[id=first-of-many]</span></div>
+      <div class="ln"> </div>
+    </div>
+    <div class="v-py">
+      <div class="ln">projects = [</div>
+      <div class="ln p4"><span class="rname">Project</span>(</div>
+      <div class="ln p8"><span class="attr">name</span>=<span class="str">"luxury_component_search"</span>,  <span class="cm"># entrupy/visual-search/luxury-bags</span></div>
+      <div class="ln p8"><span class="attr">dataset</span>=<span class="str">"88,000,000 company-owned luxury-bag images"</span>,</div>
+      <div class="ln p8"><span class="attr">goal</span>=<span class="str">"Google Lens-style component identification and detailed component-level search"</span>,</div>
+      <div class="ln p8"><span class="attr">models</span>=[<span class="str">"fine-tuned YOLO detector"</span>, <span class="str">"component classifier"</span>],</div>
+      <div class="ln p8"><span class="attr">domain</span>=<span class="str">"luxury bag authentication and retrieval"</span>,</div>
+      <div class="ln p4">),</div>
+      <div class="ln p4"><span class="rname">Project</span>(</div>
+      <div class="ln p8"><span class="attr">name</span>=<span class="str">"anyscale_model_serving"</span>,  <span class="cm"># entrupy/mlops/managed-ray</span></div>
+      <div class="ln p8"><span class="attr">runtime</span>=<span class="str">"Anyscale — managed Ray"</span>,</div>
+      <div class="ln p8"><span class="attr">traffic</span>=<span class="str">"millions of production requests"</span>,</div>
+      <div class="ln p8"><span class="attr">operations</span>=[<span class="str">"multi-model deployment"</span>, <span class="str">"production incident debugging"</span>, <span class="str">"RCA writing"</span>, <span class="str">"demo-app automation"</span>],</div>
+      <div class="ln p8"><span class="attr">consumers</span>=<span class="str">"multiple internal teams"</span>,</div>
+      <div class="ln p4">),</div>
+      <div class="ln p4"><span class="rname">Project</span>(</div>
+      <div class="ln p8"><span class="attr">name</span>=<span class="str">"eks_data_connectors"</span>,  <span class="cm"># physarum/data-connectors/eks</span></div>
+      <div class="ln p8"><span class="attr">purpose</span>=<span class="str">"ingest, parse, embed, store and semantically retrieve documents from custom uploads + external integrations"</span>,</div>
+      <div class="ln p8"><span class="attr">stack</span>=[<span class="str">"FastAPI"</span>, <span class="str">"Knative Serving"</span>, <span class="str">"Kourier"</span>, <span class="str">"Gateway/HTTPRoute"</span>, <span class="str">"StatefulSets"</span>, <span class="str">"PV/PVC"</span>, <span class="str">"namespace isolation"</span>],</div>
+      <div class="ln p8"><span class="attr">search</span>=[<span class="str">"Qdrant"</span>, <span class="str">"OpenSearch"</span>],  <span class="cm"># fast, scalable semantic retrieval</span></div>
+      <div class="ln p4">),</div>
+      <div class="ln p4"><span class="rname">Project</span>(</div>
+      <div class="ln p8"><span class="attr">name</span>=<span class="str">"rag_template"</span>,  <span class="cm"># physarum/rag-app/template</span></div>
+      <div class="ln p8"><span class="attr">generator</span>=<span class="str">"Copier + Jinja"</span>,</div>
+      <div class="ln p8"><span class="attr">ships</span>=[<span class="str">"Streamlit UI"</span>, <span class="str">"Docker"</span>, <span class="str">"GitHub Actions CI/CD"</span>, <span class="str">"RDS conversation history"</span>, <span class="str">"adaptable Terraform modules"</span>],</div>
+      <div class="ln p8"><span class="attr">effect</span>=<span class="str">"one command → a complete, deployable RAG repo tailored to user-defined inputs"</span>,</div>
+      <div class="ln p4">),</div>
+      <div class="ln p4"><span class="rname">Project</span>(</div>
+      <div class="ln p8"><span class="attr">name</span>=<span class="str">"medi_assist_chatbot"</span>,  <span class="cm"># pranav/university-project</span></div>
+      <div class="ln p8"><span class="attr">purpose</span>=<span class="str">"guides users on adverse drug reactions, blood pressure and required medicines"</span>,</div>
+      <div class="ln p8"><span class="attr">nlp</span>=[<span class="str">"NLTK lemmatization"</span>, <span class="str">"tokenization"</span>],</div>
+      <div class="ln p8"><span class="attr">model</span>=<span class="str">"supervised LSTM — TensorFlow / Keras"</span>,</div>
+      <div class="ln p8"><span class="attr">ui</span>=<span class="str">"HTML + CSS chat interface"</span>,</div>
+      <div class="ln p4">),</div>
+      <div class="ln">]</div>
+      <div class="ln"> </div>
+    </div>
   </section>
 
   <!-- ======== skills ======== -->
   <section class="step" id="skills">
-    <div class="ln cm p2"># toolbox.skills will be created</div>
-    <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"toolbox"</span> <span class="rname">"skills"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">languages</span>     = [<span class="str">"Python (scikit-learn, FastAPI, Streamlit, Chainlit, Gradio, decorators, OOP)"</span>, <span class="str">"C"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">ml_cv</span>         = [<span class="str">"YOLO fine-tuning"</span>, <span class="str">"classifier fine-tuning"</span>, <span class="str">"component-level visual search"</span>, <span class="str">"large-scale image datasets"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">model_ops</span>     = [<span class="str">"Anyscale"</span>, <span class="str">"Ray"</span>, <span class="str">"model serving"</span>, <span class="str">"production RCA"</span>, <span class="str">"demo app automation"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">aws</span>           = [<span class="str">"EC2"</span>, <span class="str">"ECS"</span>, <span class="str">"EKS"</span>, <span class="str">"VPC"</span>, <span class="str">"IAM"</span>, <span class="str">"ALB"</span>, <span class="str">"RDS"</span>, <span class="str">"DynamoDB"</span>, <span class="str">"CloudWatch"</span>, <span class="str">"SageMaker"</span>, <span class="str">"Route 53"</span>, <span class="str">"Glue"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">gcp</span>           = [<span class="str">"Dataflow"</span>, <span class="str">"Vertex AI"</span>, <span class="str">"Workflow"</span>, <span class="str">"BigQuery"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">iac_devops</span>    = [<span class="str">"Terraform"</span>, <span class="str">"Docker"</span>, <span class="str">"Kubernetes"</span>, <span class="str">"Knative"</span>, <span class="str">"Airflow"</span>, <span class="str">"GitHub Actions"</span>, <span class="str">"GitLab"</span>, <span class="str">"Copier"</span>, <span class="str">"Jinja"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">data_stores</span>   = [<span class="str">"MongoDB"</span>, <span class="str">"SQL"</span>, <span class="str">"Amazon RDS"</span>, <span class="str">"DynamoDB"</span>, <span class="str">"BigQuery"</span>, <span class="str">"Qdrant"</span>, <span class="str">"OpenSearch"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">observability</span> = [<span class="str">"Prometheus"</span>, <span class="str">"Grafana"</span>, <span class="str">"CloudWatch"</span>]</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">security</span>      = [<span class="str">"Azure Active Directory"</span>, <span class="str">"AWS IAM"</span>, <span class="str">"authentication views"</span>]</div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln status">toolbox.skills: Creating...</div>
-    <div class="ln ok">toolbox.skills: Creation complete <span class="cm">[id=still-expanding]</span></div>
-    <div class="ln"> </div>
+    <div class="v-tf">
+      <div class="ln cm p2"># toolbox.skills will be created</div>
+      <div class="ln p2"><span class="plus">+</span> <span class="kw">resource</span> <span class="rname">"toolbox"</span> <span class="rname">"skills"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">languages</span>     = [<span class="str">"Python (scikit-learn, FastAPI, Streamlit, Chainlit, Gradio, decorators, OOP)"</span>, <span class="str">"C"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">ml_cv</span>         = [<span class="str">"YOLO fine-tuning"</span>, <span class="str">"classifier fine-tuning"</span>, <span class="str">"component-level visual search"</span>, <span class="str">"large-scale image datasets"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">model_ops</span>     = [<span class="str">"Anyscale"</span>, <span class="str">"Ray"</span>, <span class="str">"model serving"</span>, <span class="str">"production RCA"</span>, <span class="str">"demo app automation"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">aws</span>           = [<span class="str">"EC2"</span>, <span class="str">"ECS"</span>, <span class="str">"EKS"</span>, <span class="str">"VPC"</span>, <span class="str">"IAM"</span>, <span class="str">"ALB"</span>, <span class="str">"RDS"</span>, <span class="str">"DynamoDB"</span>, <span class="str">"CloudWatch"</span>, <span class="str">"SageMaker"</span>, <span class="str">"Route 53"</span>, <span class="str">"Glue"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">gcp</span>           = [<span class="str">"Dataflow"</span>, <span class="str">"Vertex AI"</span>, <span class="str">"Workflow"</span>, <span class="str">"BigQuery"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">iac_devops</span>    = [<span class="str">"Terraform"</span>, <span class="str">"Docker"</span>, <span class="str">"Kubernetes"</span>, <span class="str">"Knative"</span>, <span class="str">"Airflow"</span>, <span class="str">"GitHub Actions"</span>, <span class="str">"GitLab"</span>, <span class="str">"Copier"</span>, <span class="str">"Jinja"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">data_stores</span>   = [<span class="str">"MongoDB"</span>, <span class="str">"SQL"</span>, <span class="str">"Amazon RDS"</span>, <span class="str">"DynamoDB"</span>, <span class="str">"BigQuery"</span>, <span class="str">"Qdrant"</span>, <span class="str">"OpenSearch"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">observability</span> = [<span class="str">"Prometheus"</span>, <span class="str">"Grafana"</span>, <span class="str">"CloudWatch"</span>]</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">security</span>      = [<span class="str">"Azure Active Directory"</span>, <span class="str">"AWS IAM"</span>, <span class="str">"authentication views"</span>]</div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln status">toolbox.skills: Creating...</div>
+      <div class="ln ok">toolbox.skills: Creation complete <span class="cm">[id=still-expanding]</span></div>
+      <div class="ln"> </div>
+    </div>
+    <div class="v-py">
+      <div class="ln">toolbox = <span class="rname">Toolbox</span>(</div>
+      <div class="ln p4"><span class="attr">languages</span>=[<span class="str">"Python (scikit-learn, FastAPI, Streamlit, Chainlit, Gradio, decorators, OOP)"</span>, <span class="str">"C"</span>],</div>
+      <div class="ln p4"><span class="attr">ml_cv</span>=[<span class="str">"YOLO fine-tuning"</span>, <span class="str">"classifier fine-tuning"</span>, <span class="str">"component-level visual search"</span>, <span class="str">"large-scale image datasets"</span>],</div>
+      <div class="ln p4"><span class="attr">model_ops</span>=[<span class="str">"Anyscale"</span>, <span class="str">"Ray"</span>, <span class="str">"model serving"</span>, <span class="str">"production RCA"</span>, <span class="str">"demo app automation"</span>],</div>
+      <div class="ln p4"><span class="attr">aws</span>=[<span class="str">"EC2"</span>, <span class="str">"ECS"</span>, <span class="str">"EKS"</span>, <span class="str">"VPC"</span>, <span class="str">"IAM"</span>, <span class="str">"ALB"</span>, <span class="str">"RDS"</span>, <span class="str">"DynamoDB"</span>, <span class="str">"CloudWatch"</span>, <span class="str">"SageMaker"</span>, <span class="str">"Route 53"</span>, <span class="str">"Glue"</span>],</div>
+      <div class="ln p4"><span class="attr">gcp</span>=[<span class="str">"Dataflow"</span>, <span class="str">"Vertex AI"</span>, <span class="str">"Workflow"</span>, <span class="str">"BigQuery"</span>],</div>
+      <div class="ln p4"><span class="attr">iac_devops</span>=[<span class="str">"Terraform"</span>, <span class="str">"Docker"</span>, <span class="str">"Kubernetes"</span>, <span class="str">"Knative"</span>, <span class="str">"Airflow"</span>, <span class="str">"GitHub Actions"</span>, <span class="str">"GitLab"</span>, <span class="str">"Copier"</span>, <span class="str">"Jinja"</span>],</div>
+      <div class="ln p4"><span class="attr">data_stores</span>=[<span class="str">"MongoDB"</span>, <span class="str">"SQL"</span>, <span class="str">"Amazon RDS"</span>, <span class="str">"DynamoDB"</span>, <span class="str">"BigQuery"</span>, <span class="str">"Qdrant"</span>, <span class="str">"OpenSearch"</span>],</div>
+      <div class="ln p4"><span class="attr">observability</span>=[<span class="str">"Prometheus"</span>, <span class="str">"Grafana"</span>, <span class="str">"CloudWatch"</span>],</div>
+      <div class="ln p4"><span class="attr">security</span>=[<span class="str">"Azure Active Directory"</span>, <span class="str">"AWS IAM"</span>, <span class="str">"authentication views"</span>],</div>
+      <div class="ln">)</div>
+      <div class="ln"> </div>
+    </div>
   </section>
 
   <!-- ======== education + human ======== -->
   <section class="step" id="education">
-    <div class="ln cm p2"># data.university.pes will be read</div>
-    <div class="ln p2"><span class="read">&lt;=</span> <span class="kw">data</span> <span class="rname">"university"</span> <span class="rname">"pes"</span> {</div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">name</span>   = <span class="str">"PES University, Bangalore"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">degree</span> = <span class="str">"B.E. — EEE major, CSE minor"</span></div>
-    <div class="ln p6"><span class="plus">+</span> <span class="attr">class</span>  = <span class="num">2024</span></div>
-    <div class="ln p4">}</div>
-    <div class="ln"> </div>
-    <div class="ln ok">data.university.pes: Read complete after 4y <span class="cm">[id=be-2024]</span></div>
-    <div class="ln"> </div>
-    <div class="ln cm p2"># human.pranav — exists outside of terraform state</div>
-    <div class="ln cm p2"># reading_list = ["Crime and Punishment", "Beyond Good and Evil",</div>
-    <div class="ln cm p2">#                 "Notes from Underground", "Ordinary Men", "The Metamorphosis"]</div>
-    <div class="ln cm p2"># note: refuses to be fully declarative</div>
-    <div class="ln"> </div>
+    <div class="v-tf">
+      <div class="ln cm p2"># data.university.pes will be read</div>
+      <div class="ln p2"><span class="read">&lt;=</span> <span class="kw">data</span> <span class="rname">"university"</span> <span class="rname">"pes"</span> {</div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">name</span>   = <span class="str">"PES University, Bangalore"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">degree</span> = <span class="str">"B.E. — EEE major, CSE minor"</span></div>
+      <div class="ln p6"><span class="plus">+</span> <span class="attr">class</span>  = <span class="num">2024</span></div>
+      <div class="ln p4">}</div>
+      <div class="ln"> </div>
+      <div class="ln ok">data.university.pes: Read complete after 4y <span class="cm">[id=be-2024]</span></div>
+      <div class="ln"> </div>
+      <div class="ln cm p2"># human.pranav — exists outside of terraform state</div>
+      <div class="ln cm p2"># reading_list = ["Crime and Punishment", "Beyond Good and Evil",</div>
+      <div class="ln cm p2">#                 "Notes from Underground", "Ordinary Men", "The Metamorphosis"]</div>
+      <div class="ln cm p2"># note: refuses to be fully declarative</div>
+      <div class="ln"> </div>
+    </div>
+    <div class="v-py">
+      <div class="ln">education = <span class="rname">University</span>(</div>
+      <div class="ln p4"><span class="attr">name</span>=<span class="str">"PES University, Bangalore"</span>,</div>
+      <div class="ln p4"><span class="attr">degree</span>=<span class="str">"B.E. — EEE major, CSE minor"</span>,</div>
+      <div class="ln p4"><span class="attr">class_of</span>=<span class="num">2024</span>,  <span class="cm"># read complete after 4y</span></div>
+      <div class="ln">)</div>
+      <div class="ln"> </div>
+      <div class="ln cm"># reading_list — exists outside of version control</div>
+      <div class="ln cm"># ["Crime and Punishment", "Beyond Good and Evil", "Notes from Underground",</div>
+      <div class="ln cm">#  "Ordinary Men", "The Metamorphosis"]</div>
+      <div class="ln cm"># note: refuses to be fully declarative</div>
+      <div class="ln"> </div>
+      <div class="ln"><span class="kw">if</span> __name__ == <span class="str">"__main__"</span>:</div>
+      <div class="ln p4">engineer.hire()</div>
+      <div class="ln"> </div>
+    </div>
   </section>
 
   <!-- ======== outputs ======== -->
   <section class="step" id="outputs">
-    <div class="ln">Plan: <span class="ok">11 to add</span>, 0 to change, 0 to destroy.</div>
-    <div class="ln"> </div>
-    <div class="ln okb">Apply complete! Resources: 11 added, 0 changed, 0 destroyed.</div>
-    <div class="ln"> </div>
-    <div class="ln">Outputs:</div>
-    <div class="ln"> </div>
-    <div class="ln"><span class="attr">email</span>    = <a class="str" href="mailto:pranavperla21@gmail.com">"pranavperla21@gmail.com"</a></div>
-    <div class="ln"><span class="attr">phone</span>    = <a class="str" href="tel:+917981372371">"+91 79813 72371"</a></div>
-    <div class="ln"><span class="attr">location</span> = <span class="str">"Bangalore, India"</span></div>
-    <div class="ln"><span class="attr">status</span>   = <span class="str">"currently MLOps Engineer at Entrupy"</span></div>
-    <div class="ln"> </div>
-    <div class="ln cm"># the prompt below is live — try `help`</div>
-    <div class="ln"> </div>
+    <div class="v-tf">
+      <div class="ln">Plan: <span class="ok">11 to add</span>, 0 to change, 0 to destroy.</div>
+      <div class="ln"> </div>
+      <div class="ln okb">Apply complete! Resources: 11 added, 0 changed, 0 destroyed.</div>
+      <div class="ln"> </div>
+      <div class="ln">Outputs:</div>
+      <div class="ln"> </div>
+      <div class="ln"><span class="attr">email</span>    = <a class="str" href="mailto:pranavperla21@gmail.com">"pranavperla21@gmail.com"</a></div>
+      <div class="ln"><span class="attr">phone</span>    = <a class="str" href="tel:+917981372371">"+91 79813 72371"</a></div>
+      <div class="ln"><span class="attr">location</span> = <span class="str">"Bangalore, India"</span></div>
+      <div class="ln"><span class="attr">status</span>   = <span class="str">"currently MLOps Engineer at Entrupy"</span></div>
+      <div class="ln"> </div>
+      <div class="ln cm"># the prompt below is live — try `help`</div>
+      <div class="ln"> </div>
+    </div>
+    <div class="v-py">
+      <div class="ln"><span class="prompt">pranav@career:~$</span> python3 career.py</div>
+      <div class="ln"> </div>
+      <div class="ln ok">[ok] engineer initialized ............... pranav-perla</div>
+      <div class="ln status">[..] job "Entrupy" running .............. 9mo elapsed (current)</div>
+      <div class="ln ok">[ok] job "Physarum.ai" complete ......... 18mo</div>
+      <div class="ln ok">[ok] job "Accure.ai" complete ........... 3mo</div>
+      <div class="ln ok">[ok] job "OdinSchool" complete .......... 3mo</div>
+      <div class="ln ok">[ok] 5 projects shipped, 0 failed</div>
+      <div class="ln"> </div>
+      <div class="ln"><span class="attr">email</span>    = <a class="str" href="mailto:pranavperla21@gmail.com">"pranavperla21@gmail.com"</a></div>
+      <div class="ln"><span class="attr">phone</span>    = <a class="str" href="tel:+917981372371">"+91 79813 72371"</a></div>
+      <div class="ln"><span class="attr">location</span> = <span class="str">"Bangalore, India"</span></div>
+      <div class="ln"><span class="attr">status</span>   = <span class="str">"currently MLOps Engineer at Entrupy"</span></div>
+      <div class="ln"> </div>
+      <div class="ln cm"># the prompt below is live — try `help`</div>
+      <div class="ln"> </div>
+    </div>
   </section>
 
   <!-- ======== live prompt ======== -->
@@ -274,7 +453,7 @@
     <a href="#education"><span class="tmux-idx">5</span>:edu</a>
     <a href="#outputs"><span class="tmux-idx">6</span>:outputs</a>
   </div>
-  <div class="tmux-right"><span>pranav@career</span><span id="clock">--:--</span></div>
+  <div class="tmux-right"><span id="mode-indicator">[tf]</span><span>pranav@career</span><span id="clock">--:--</span></div>
 </nav>
 
 <script src="script.js"></script>

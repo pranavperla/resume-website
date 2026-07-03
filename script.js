@@ -1,8 +1,50 @@
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+/* ---------- tf / py mode toggle ---------- */
+const setMode = (function modeToggle() {
+  const tabTf = document.getElementById("tab-tf");
+  const tabPy = document.getElementById("tab-py");
+  const winTitle = document.getElementById("win-title");
+  const modeIndicator = document.getElementById("mode-indicator");
+
+  function setMode(mode) {
+    document.body.dataset.mode = mode;
+    tabTf.classList.toggle("active", mode === "tf");
+    tabPy.classList.toggle("active", mode === "py");
+    tabTf.setAttribute("aria-selected", mode === "tf");
+    tabPy.setAttribute("aria-selected", mode === "py");
+    winTitle.textContent =
+      mode === "py"
+        ? "pranav@career: ~/pranav-perla — cat career.py — 80×24"
+        : "pranav@career: ~/pranav-perla — terraform apply — 80×24";
+    modeIndicator.textContent = mode === "py" ? "[py]" : "[tf]";
+    try { localStorage.setItem("resume-mode", mode); } catch (e) {}
+  }
+
+  tabTf.addEventListener("click", () => setMode("tf"));
+  tabPy.addEventListener("click", () => setMode("py"));
+
+  let saved = null;
+  try { saved = localStorage.getItem("resume-mode"); } catch (e) {}
+  if (saved === "py") setMode("py");
+
+  return setMode;
+})();
+
 /* ---------- boot sequence: type commands, then stream output lines ---------- */
 (function boot() {
-  const lines = Array.from(document.querySelectorAll(".boot-line"));
+  const mode = document.body.dataset.mode;
+  const activeVariant = mode === "py" ? ".v-py" : ".v-tf";
+  const inactiveVariant = mode === "py" ? ".v-tf" : ".v-py";
+
+  // the hidden mode's boot is pre-completed so toggling later shows it instantly
+  document.querySelectorAll(`.boot ${inactiveVariant} .boot-line`).forEach((ln) => {
+    ln.classList.add("shown");
+    const t = ln.querySelector(".typed");
+    if (t) t.textContent = t.dataset.type;
+  });
+
+  const lines = Array.from(document.querySelectorAll(`.boot ${activeVariant} .boot-line`));
 
   if (reduceMotion) {
     lines.forEach((ln) => {
@@ -130,6 +172,8 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
       "  contact       email / phone",
       "  skills        dump the toolbox",
       "  books         cat ~/.reading_list",
+      "  python        switch the resume to python",
+      "  terraform     switch the resume back to terraform",
       "  terraform destroy   (careful)",
       "  clear         wipe the screen",
     ],
@@ -174,6 +218,15 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
     ],
     "terraform apply": () => ["Apply complete! (you already scrolled through it)"],
     "terraform plan": () => ["No changes. Pranav's infrastructure is up-to-date."],
+    python: () => {
+      setMode("py");
+      return ["switching interpreter... career.py loaded — scroll up to read it."];
+    },
+    python3: () => COMMANDS.python(),
+    terraform: () => {
+      setMode("tf");
+      return ["switching back to HCL... terraform plan re-rendered — scroll up to read it."];
+    },
   };
 
   function print(text, cls) {
