@@ -1,0 +1,181 @@
+/* ============ terraform-plan resume — terminal aesthetic ============ */
+:root {
+  --bg: #0d1117;
+  --bg-bar: #161b22;
+  --fg: #c9d1d9;
+  --dim: #8b949e;
+  --faint: #484f58;
+  --green: #3fb950;
+  --green-bright: #56d364;
+  --cyan: #76e3ea;
+  --blue: #79c0ff;
+  --magenta: #d2a8ff;
+  --yellow: #e3b341;
+  --red: #ff7b72;
+  --amber: #ffa657;
+  --mono: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #010409;
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: rgba(63, 185, 80, 0.3); }
+
+a { color: inherit; }
+a.str:hover { color: var(--green-bright); }
+
+/* ============ window chrome ============ */
+.titlebar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-bar);
+  border-bottom: 1px solid #21262d;
+  padding: 10px 14px;
+}
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot-r { background: #ff5f57; }
+.dot-y { background: #febc2e; }
+.dot-g { background: #28c840; }
+.title {
+  flex: 1;
+  text-align: center;
+  color: var(--dim);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============ terminal body ============ */
+.term {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px clamp(14px, 4vw, 36px) 0;
+  background: var(--bg);
+  min-height: 100vh;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+}
+
+.term-pad { height: 40vh; }
+
+.ln, .boot-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 1.65em;
+}
+
+/* left indentation mimicking terraform plan output */
+.p2  { padding-left: 2ch; }
+.p4  { padding-left: 4ch; }
+.p6  { padding-left: 6ch; }
+.p8  { padding-left: 8ch; }
+.p10 { padding-left: 10ch; text-indent: -2ch; margin-left: 2ch; }
+.p12 { padding-left: 12ch; }
+
+/* ============ syntax colors ============ */
+.prompt  { color: var(--green-bright); font-weight: 700; }
+.plus    { color: var(--green); font-weight: 700; }
+.read    { color: var(--cyan); font-weight: 700; }
+.kw      { color: var(--magenta); }
+.rname   { color: var(--blue); }
+.attr    { color: var(--cyan); }
+.str     { color: var(--amber); text-decoration: none; }
+.num     { color: var(--blue); }
+.cm      { color: var(--faint); font-style: italic; }
+.cm2     { color: var(--dim); }
+.ok      { color: var(--green); }
+.okb     { color: var(--green-bright); font-weight: 700; }
+.status  { color: var(--yellow); }
+.err     { color: var(--red); }
+
+/* ============ boot + scroll reveal ============ */
+.boot-line { opacity: 0; }
+.boot-line.shown { opacity: 1; }
+
+.step .ln {
+  opacity: 0;
+  transform: translateY(2px);
+  transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+}
+.step .ln.shown { opacity: 1; transform: none; }
+
+/* ============ live prompt ============ */
+.prompt-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1ch;
+  margin-top: 4px;
+}
+
+#cli {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--fg);
+  font-family: var(--mono);
+  font-size: 14px;
+  caret-color: var(--green-bright);
+}
+
+#cli-history .ln { opacity: 1; transform: none; }
+
+/* ============ tmux status bar ============ */
+.tmuxbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-bar);
+  border-top: 1px solid #21262d;
+  padding: 6px 14px;
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.tmux-left { display: flex; gap: 14px; white-space: nowrap; }
+.tmux-left a {
+  color: var(--dim);
+  text-decoration: none;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: color 0.15s, background 0.15s;
+}
+.tmux-left a:hover { color: var(--fg); background: #21262d; }
+.tmux-left a.active { color: #010409; background: var(--green); font-weight: 700; }
+.tmux-idx { opacity: 0.7; margin-right: 1px; }
+
+.tmux-right { display: flex; gap: 14px; color: var(--dim); white-space: nowrap; }
+
+/* ============ misc ============ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .boot-line, .step .ln { opacity: 1 !important; transform: none !important; transition: none; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 12.5px; }
+  #cli { font-size: 12.5px; }
+  .p10 { padding-left: 6ch; }
+  .p12 { padding-left: 8ch; }
+  .tmux-right span:first-child { display: none; }
+}
